@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>zxcaidis.kz — Я ЛЮБЛЮ ЛАНУ</title>
+  <meta name="description" content="Сайт zxcaidis.kz — Я ЛЮБЛЮ ЛАНУ" />
+  <style>
+    :root{
+      --bg:#ffe3ec;      /* базовый фон */
+      --text:#ffffff;    /* цвет текста */
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+    }
+
+    /* Плитка с сердечками (SVG как data-URL) */
+    body{
+      background:
+        url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72'>\
+  <rect width='100%' height='100%' fill='%23ffe3ec'/>\
+  <text x='12' y='28' font-size='28'>❤️</text>\
+  <text x='40' y='56' font-size='28'>❤️</text>\
+  <text x='4'  y='60' font-size='20'>💗</text>\
+  <text x='50' y='20' font-size='20'>💗</text>\
+</svg>") repeat,
+        var(--bg);
+      background-size: 90px 90px, auto;
+      display:grid;
+      place-items:center;
+    }
+
+    .wrap{
+      text-align:center;
+      padding:2rem;
+      user-select: none;
+    }
+
+    h1{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      font-size: clamp(48px, 12vw, 160px);
+      color: var(--text);
+      text-shadow:
+        0 2px 6px rgba(0,0,0,.25),
+        0 0 0.02em #ff4d6d,
+        0 0 0.06em #ff4d6d;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse{
+      0%,100%{ transform: scale(1); }
+      50%    { transform: scale(1.05); }
+    }
+
+    .domain{
+      margin-top:1rem;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      font-weight: 600;
+      font-size: clamp(14px, 2.6vw, 22px);
+      color: #6b1b2b;
+      opacity: 0.95;
+      text-transform: lowercase;
+      letter-spacing: 0.06em;
+      background: rgba(255,255,255,0.6);
+      padding: 6px 12px;
+      border-radius: 999px;
+      display: inline-block;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+
+    /* Полноэкранный режим для мобильников/ПК — центрирование и защита от прокрутки */
+    @media (prefers-reduced-motion: reduce) {
+      h1 { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" aria-label="Главная страница zxcaidis.kz">
+    <h1>Я ЛЮБЛЮ ЛАНУ</h1>
+    <div class="domain">zxcaidis.kz</div>
+  </div>
+</body>
+</html>
